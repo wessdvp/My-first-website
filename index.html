@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    
+    <!-- TITLE -->
+    <h1 id="title">Survey Form</h1>
+
+    <!-- DESCRIPTION -->
+    <p id="description"><em>Please fill out this form with the required information</em></p>
+    
+    <!-- SURVEY FORM -->
+    <form id="survey-form">
+
+        <!-- PERSONAL INFORMATION -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label id="name-label">Name
+                <input id="name" type="text" placeholder="Your name" required>
+            </label>
+            <label id="email-label">Email
+                <input id="email" type="email" placeholder="Your email (i.e.: example@example.com)" required>
+            </label>
+            <label id="number-label">Age
+                <input id="number" type="number" placeholder="Your age" max="120" min="13">
+            </label>
+        </fieldset>
+
+        <!-- TECH SPECIALITY -->
+        <fieldset>
+            <legend>Technical Speciality</legend>
+            <p>What is your tech speciality:</p>
+            <select id="dropdown">
+                <option value="">Select an option</option>
+                <option value="1">Backend</option>
+                <option value="2">FullStack</option>
+                <option value="3">Python</option>
+            </select>
+        </fieldset>
+
+        <!-- EXPERIENCE FEEDBACK -->
+        <fieldset>
+            <legend>Experience Feedback</legend>
+            <p>Do you like the experience so far?</p>
+            <label><input type="radio" name="rating" value="Yes" class="inline" required> Yes</label>
+            <label><input type="radio" name="rating" value="Maybe" class="inline"> Maybe</label>
+            <label><input type="radio" name="rating" value="No" class="inline"> No</label>
+        </fieldset>
+
+        <!-- IMPROVEMENT SUGGESTIONS -->
+        <fieldset>
+            <legend>Improvement Suggestions</legend>
+            <p>What would you like to see improved? (Check all that apply)</p>
+            <label><input type="checkbox" value="style" class="inline"> Style </label>
+            <label><input type="checkbox" value="design" class="inline"> Design </label>
+            <label><input type="checkbox" value="functionality" class="inline"> Functionality </label>
+        </fieldset>
+
+        <!-- COMMENTS -->
+        <fieldset>
+            <legend>Additional Comments</legend>
+            <label for="comments">Any suggestions?
+                <textarea id="comments" rows="10" cols"50" placeholder="Write your suggestions here..."></textarea>
+            </label>
+        </fieldset>
+
+        <!-- SUBMIT BUTTON -->    
+        <input type="submit" value="Submit">
+    </form>
+
+    <footer>&copy; wessdvp 2024    </footer>
+
+</body>
+</html>
