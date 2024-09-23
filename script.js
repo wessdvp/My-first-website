@@ -1,18 +1,22 @@
-document.getElementById('toggle-button').addEventListener('click', function() {
-    const currentTheme = document.getElementById('theme-stylesheet');
-    const newTheme = document.createElement('link');
+document.addEventListener('DOMContentLoaded', function() {
+    const themeStylesheet = document.getElementById('theme-stylesheet');
 
-    newTheme.rel = 'stylesheet';
-    newTheme.id = 'theme-stylesheet';
-    
-    // Toggle between stylesheets
-    if (currentTheme.getAttribute('href') === 'styles.css') {
-        newTheme.href = 'night-mode.css';
-    } else {
-        newTheme.href = 'styles.css';
+    // Check for the saved theme in localStorage and apply it
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        themeStylesheet.href = savedTheme;
     }
 
-    // Replace the current stylesheet with the new one
-    document.head.removeChild(currentTheme);
-    document.head.appendChild(newTheme);
+    document.getElementById('toggle-button').addEventListener('click', function() {
+        const currentTheme = themeStylesheet.getAttribute('href');
+        
+        // Toggle between stylesheets
+        if (currentTheme.includes('styles.css')) {
+            themeStylesheet.href = 'night-mode.css';
+            localStorage.setItem('theme', 'night-mode.css');
+        } else {
+            themeStylesheet.href = 'styles.css';
+            localStorage.setItem('theme', 'styles.css');
+        }
+    });
 });
