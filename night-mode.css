@@ -3,6 +3,7 @@
     src: url('FONT.ttf') format('truetype'); /* Path to the font file */
 }
 
+
 @font-face {
     font-family: 'CASLON';
     src: url(FONT2.otf);
@@ -12,7 +13,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background-image: url("yourimage.png");
+    background-image: url("yourimage2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,20 +26,24 @@ body {
 h1 {
     margin: 1em auto;
     text-align: center;
-    color: #fddf9e;
+    color: #000000;
     font-family: CASLON, sans-serif ;
+
 }
 
 h2 {
     margin-bottom: 15px;
     text-align: center;
     margin-top: 5px;
-    color: #f9f6f9;
+    color: #000000;
     font-size: 20px;
     font-weight: 500;
 
 }
 
+p {
+    color: #000;
+}
 
 form {
     width: 60vw;
@@ -46,37 +51,43 @@ form {
     min-width: 400px;
     margin: 0 auto;
     padding-bottom: 2em;
-    color: #f9f9f9;
+    color: #000000;
 }
 
 label {
     display: block;
     text-align: left;
     font-size: 20px;
-    color: #ffffff;
+    color: #000000;
 }
 
 input {
     width: 100%;
     text-align: left;
+    color: #000;
 }
 
 input, textarea, select {
   margin: 10px 0 0 0;
   width: 100%;
   min-height: 2em;
+  color: #000;
+}
+
+legend {
+    color: #000;
 }
 
 input, textarea {
-    background-color: rgba(223, 203, 237, 0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     border: 0px solid #232323;
     backdrop-filter: blur(50px);
     border-radius: 5px;
-    color: #0c0a16;
+    color: #000000;
   }
 
   fieldset {
-    background-color: rgba(179, 163, 230, 0.469);
+    background-color: rgba(215, 215, 215, 0.53);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border: none;
@@ -86,12 +97,12 @@ input, textarea {
     margin-bottom: 20px;
     text-align: left;
     box-shadow: #0c0a16 -3px 3px 25px;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   }
   
 
   fieldset:hover {
-    background-color: rgba(179, 163, 230, 1);
+    background-color: rgba(255, 255, 255, 0.879);
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border: none;
@@ -100,7 +111,7 @@ input, textarea {
     padding-right: 50px;
     margin-bottom: 20px;
     text-align: left;
-    box-shadow: #aaa0dd -7px 7px 50px;
+    box-shadow: #ffffff -7px 7px 50px;
     transform: scale(1.03);
   }
   
@@ -118,6 +129,17 @@ input, textarea {
     color: #000000; /* Change cette couleur selon tes préférences */
     transition: color 0.3s; /* Transition pour la couleur */
 } 
+
+fieldset:hover input {
+    border: 2px solid #000000;
+    transition: border-color 0.3s; /* Ajoute cette ligne pour la transition */
+}
+
+fieldset:hover textarea {
+    border: 2px solid #000000;
+    transition: border-color 0.3s; /* Ajoute cette ligne pour la transition */
+}
+
 
   fieldset:last-of-type {
     border-bottom: none;
@@ -151,11 +173,11 @@ input {
 label {
     margin-bottom: 10px;
     width: 95%;
-    color: #ffffff;
+    color: #000000;
 }
 
 input[type="submit"] {
-    background: linear-gradient(180deg, #d39ce1, #e78af4);
+    background: linear-gradient(180deg, #ffffff, #dfdfdf);
     backdrop-filter: blur(20px);
     border: ffffff;
     text-align: center;
@@ -165,11 +187,11 @@ input[type="submit"] {
 
 
 input[type="submit"]:hover {
-    background: linear-gradient(180deg, #e9c881, #f7b36b);
+    background: linear-gradient(180deg, #e6f0ff, #bce3ff);
     backdrop-filter: blur(20px);
     border: ffffff;
     text-align: center;
-    box-shadow: #d9a17c -5px 5px 50px;
+    box-shadow: #c3c7cf -5px 5px 50px;
     transform: scale(1.05);
 }
  
@@ -190,23 +212,19 @@ legend {
     right: 20px;
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
-    border: 1.5px solid;
-    border-color: #5f5f5f;
+    border: 1.5px solid #ccc; /* Light border */
     border-radius: 50%; /* Makes the button round */
-    background: linear-gradient(-180deg,#232323, #0c0a16); /* Gradient background */
+    background: #fff; /* White background */
+    color: #000; /* Dark text */
     font-size: 16px;
     cursor: pointer;
-    box-shadow: #000000 -2px 2px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 #toggle-button:hover {
-    background-color: #232323; /* Change gradient on hover */
-    box-shadow: #bbb6b6 -4px 4px 20px;
-}
-
-#toggle-button {
-    box-shadow: none; /* Initial shadow */
+    background-color: #f0f0f0; /* Light gray on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 

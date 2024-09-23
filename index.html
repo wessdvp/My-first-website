@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
     <title>Survey Form</title>
 </head>
 <body>
+    <button id="toggle-button">🌙</button> <!-- Button with moon emoji -->
+    <canvas id="pixelCanvas" style="display: none;"></canvas>
+    <div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: transparent; pointer-events: none;"></div>
     
     <!-- TITLE -->
     <h1 id="title">Survey Form</h1>
 
     <!-- DESCRIPTION -->
-    <p id="description"><em>Please fill out this form with the required information</em></p>
+    <h2 id="description"><em>Please fill out this form with the required information</em></h2>
     
     <!-- SURVEY FORM -->
     <form id="survey-form">
@@ -65,7 +68,7 @@
         <fieldset>
             <legend>Additional Comments</legend>
             <label for="comments">Any suggestions?
-                <textarea id="comments" rows="10" cols"50" placeholder="Write your suggestions here..."></textarea>
+                <textarea id="comments" rows="10" cols="50" placeholder="Write your suggestions here..."></textarea>
             </label>
         </fieldset>
 
@@ -75,5 +78,6 @@
 
     <footer>wessdvp 2024</footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
